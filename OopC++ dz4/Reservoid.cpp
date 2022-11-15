@@ -109,3 +109,26 @@ void Reservoid::input()
 	cout << "Type: ";
 	cin >> type;
 }
+int getMaxWaterArea(Reservoid* reservoid, int size)
+{
+	int maxWaterArea = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (reservoid[i].getArea() > maxWaterArea)
+		{
+			maxWaterArea = reservoid[i].getArea();
+		}
+	}
+	return maxWaterArea;
+}
+void findType(Reservoid reservoid, char* type)
+{
+	if (strcmp(reservoid.getType(), type) == 0)
+	{
+		reservoid.print();
+	}
+}
+void copyAndMove(Reservoid reservoid, Reservoid& reservoid1)
+{
+	reservoid1 = reservoid;
+}

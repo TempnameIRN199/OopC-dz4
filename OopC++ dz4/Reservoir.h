@@ -33,7 +33,7 @@ public:
 	void setType(char* type);
 	// метод приблизительного обьема
 	int getVolume(int leght, int width, int maxDepth);
-	// метод определения площади водной поверхности
+	// метод определения площади водной пов ерхности
 	int getWaterArea(int leght, int width);
 	// метод проверки относятся ли водоемы к одному типу ( море-море; бассейн-пруд;)
 	bool isSameType(char* type1, char* type2);
@@ -43,4 +43,10 @@ public:
 	void print();
 	// метод ввода информации об объекте
 	void input();
+	// метод для определения максимальной площади водной поверхности
+	int getMaxWaterArea(Reservoid reservoid1, Reservoid reservoid2);
+	// для поиска водоема нужного типа
+	void findType(Reservoid reservoid1, Reservoid reservoid2, Reservoid reservoid3, char* type);
+	// для копирования и переноса объектов
+	void copyAndMove(Reservoid reservoid1, Reservoid reservoid2, Reservoid reservoid3);
 };
